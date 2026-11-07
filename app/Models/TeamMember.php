@@ -18,6 +18,7 @@ class TeamMember extends Model
         'location',
         'linkedin_url',
         'github_url',
+        'facebook_url',
         'website_url',
         'skills',
         'experience',

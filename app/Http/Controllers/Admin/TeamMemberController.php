@@ -110,6 +110,7 @@ class TeamMemberController extends Controller
             'location' => ['nullable', 'string', 'max:120'],
             'linkedin_url' => ['nullable', 'url', 'max:255'],
             'github_url' => ['nullable', 'url', 'max:255'],
+            'facebook_url' => ['nullable', 'url', 'max:255'],
             'website_url' => ['nullable', 'url', 'max:255'],
             'skills' => ['nullable', 'string', 'max:2000'],
             'experience' => ['nullable', 'string', 'max:5000'],
