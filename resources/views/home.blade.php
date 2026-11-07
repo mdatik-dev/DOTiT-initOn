@@ -1,0 +1,12 @@
+@extends('layouts.site')
+@section('title', $siteSettings['site_title'])
+@section('content')
+  @include('partials.hero')
+  @include('sections.clients')
+  @include('sections.about')
+  @include('sections.services')
+  @include('sections.initon')
+  @include('sections.process')
+  @include('partials.cta')
+  @include('sections.contact')
+@endsection

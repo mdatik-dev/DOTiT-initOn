@@ -1,0 +1,9 @@
+.admin-team-person{display:flex;align-items:center;gap:11px;min-width:190px}
+.admin-team-person>img,.admin-team-person>span{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border:1px solid var(--admin-line);border-radius:11px;background:#111e33;color:#74dff0;object-fit:cover}
+.admin-team-person>span{font-size:16px}
+.admin-team-person>div{display:grid;gap:4px}
+.admin-team-person strong{color:var(--admin-text);font-size:12px}
+.admin-team-person small{color:var(--admin-muted);font-size:11px}
+.admin-sample-label{display:inline-block;margin-left:5px;padding:3px 6px;border-radius:99px;background:rgba(255,191,0,.1);color:#ffd76b;font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.admin-team-preview{width:104px;height:104px;margin-top:5px;border:1px solid var(--admin-line);border-radius:12px;object-fit:cover}
+@media(max-width:650px){.admin-team-person{min-width:155px}}
