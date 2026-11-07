@@ -18,7 +18,7 @@
           <td><i class="{{ $service->icon }}"></i> &nbsp;{{ $service->name }}</td>
           <td><span class="admin-badge {{ $service->is_active ? '' : 'muted' }}">{{ $service->is_active ? 'Active' : 'Hidden' }}</span></td>
           <td>{{ $service->is_featured ? 'Yes' : 'No' }}</td>
-          <td><div class="admin-inline-actions"><a href="{{ route('admin.services.edit', $service) }}">Edit</a><form method="POST" action="{{ route('admin.services.destroy', $service) }}" onsubmit="return confirm('Delete this service?')">@csrf @method('DELETE')<button class="admin-button danger" type="submit">Delete</button></form></div></td>
+          <td><div class="admin-inline-actions"><a class="admin-action edit" href="{{ route('admin.services.edit', $service) }}"><i class="fa-solid fa-pen-to-square"></i><span>Edit</span></a><form method="POST" action="{{ route('admin.services.destroy', $service) }}" onsubmit="return confirm('Delete this service?')">@csrf @method('DELETE')<button class="admin-action delete" type="submit"><i class="fa-solid fa-trash"></i><span>Delete</span></button></form></div></td>
         </tr>
       @endforeach
       </tbody></table></div>

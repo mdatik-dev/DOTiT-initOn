@@ -1,6 +1,6 @@
 .about-story{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);gap:clamp(28px,5vw,68px);align-items:center;margin-top:80px;padding:clamp(28px,4vw,48px);border:1px solid rgba(111,145,255,.16);border-radius:24px;background:linear-gradient(145deg,rgba(13,23,44,.78),rgba(6,11,24,.96))}
-.about-logo-card{display:grid;place-items:center;min-height:280px;padding:38px;border-right:1px solid rgba(111,145,255,.14)}
-.about-logo-card img{max-width:240px;width:100%;max-height:180px;object-fit:contain;border-radius:18px}
+.about-logo-card{display:grid;place-items:center;min-height:320px;padding:32px;border-right:1px solid rgba(111,145,255,.14)}
+.about-logo-card img{max-width:300px;width:100%;max-height:220px;object-fit:contain;border-radius:18px}
 .about-story-content{min-width:0}
 .about-story-content h2{margin:12px 0 16px;font:700 clamp(30px,4vw,48px)/1.08 'Space Grotesk',Inter,sans-serif;letter-spacing:-.04em}
 .about-story-content>p{max-width:760px;color:#aeb8cc;font-size:15px;line-height:1.85}
@@ -34,7 +34,7 @@
 .admin-journey-remove{width:38px;height:38px;border:0;border-radius:50%;cursor:pointer;color:#fff;background:rgba(239,68,68,.14)}
 .admin-journey-remove:hover{background:#ef4444}
 @media(max-width:900px){.about-story{grid-template-columns:1fr}.about-logo-card{min-height:220px;border-right:0;border-bottom:1px solid rgba(111,145,255,.14)}.about-values{grid-template-columns:1fr}}
-@media(max-width:650px){.about-story{margin-top:50px;padding:18px}.about-logo-card{min-height:190px;padding:24px}.about-story-content h2{font-size:30px}.about-story-content>p{font-size:13px}.about-feature-image{height:230px}.about-values{gap:12px}.about-value-card{gap:14px;padding:20px}.about-value-icon{flex-basis:42px;width:42px;height:42px}}
+@media(max-width:650px){.about-story{margin-top:50px;padding:18px}.about-logo-card{min-height:190px;padding:24px}.about-logo-card img{max-width:220px;max-height:150px}.about-story-content h2{font-size:30px}.about-story-content>p{font-size:13px}.about-feature-image{height:auto;min-height:0;max-height:none;object-fit:contain}.about-values{gap:12px}.about-value-card{gap:14px;padding:20px}.about-value-icon{flex-basis:42px;width:42px;height:42px}}
 @media(max-width:700px){
   .about-timeline{padding-left:22px}
   .about-timeline::before{left:22px;transform:none}

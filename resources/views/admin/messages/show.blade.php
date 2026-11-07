@@ -7,7 +7,7 @@
     <a class="message-back" href="{{ route('admin.messages.index') }}"><i class="fa-solid fa-arrow-left"></i> All messages</a>
     <form method="POST" action="{{ route('admin.messages.destroy', $contactMessage) }}" onsubmit="return confirm('Permanently delete this message?')">
       @csrf @method('DELETE')
-      <button class="admin-button danger" type="submit"><i class="fa-solid fa-trash"></i> Delete message</button>
+      <button class="admin-action delete" type="submit"><i class="fa-solid fa-trash"></i><span>Delete message</span></button>
     </form>
   </div>
   <section class="admin-card message-detail-card">

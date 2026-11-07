@@ -20,10 +20,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=2" />
-  <link rel="stylesheet" href="{{ asset('css/site.css') }}?v=16" />
-  <link rel="stylesheet" href="{{ asset('css/team.css') }}?v=5" />
-  <link rel="stylesheet" href="{{ asset('css/about.css') }}?v=2" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=3" />
+  <link rel="stylesheet" href="{{ asset('css/site.css') }}?v=23" />
+  <link rel="stylesheet" href="{{ asset('css/team.css') }}?v=6" />
+  <link rel="stylesheet" href="{{ asset('css/about.css') }}?v=3" />
 </head>
 <body>
   <div class="cursor-glow"></div>
@@ -38,10 +38,10 @@
         <a class="{{ $currentPage === 'about' ? 'active' : '' }}" href="{{ route('pages.show', 'about') }}">About</a>
         <a class="{{ request()->routeIs('team.*') ? 'active' : '' }}" href="{{ route('team.index') }}">Our Team</a>
         <a class="{{ $currentPage === 'services' ? 'active' : '' }}" href="{{ route('pages.show', 'services') }}">Services</a>
-        <a class="{{ $currentPage === 'initon' ? 'active' : '' }}" href="{{ route('pages.show', 'initon') }}">initOn</a>
+        <a class="{{ $currentPage === 'gallery' ? 'active' : '' }}" href="{{ route('pages.show', 'gallery') }}">Gallery</a>
         <a class="{{ $currentPage === 'process' ? 'active' : '' }}" href="{{ route('pages.show', 'process') }}">Process</a>
         <a class="{{ $currentPage === 'contact' ? 'active' : '' }}" href="{{ route('pages.show', 'contact') }}">Contact</a>
-        <a class="nav-cta" href="{{ route('pages.show', 'contact') }}">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="nav-cta nav-initon" href="{{ route('pages.show', 'initon') }}">initOn <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </nav>
   </header>
@@ -54,6 +54,6 @@
   <button class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="{{ asset('js/script.js') }}?v=2"></script>
+  <script src="{{ asset('js/script.js') }}?v=3"></script>
 </body>
 </html>

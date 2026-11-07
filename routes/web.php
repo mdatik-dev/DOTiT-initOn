@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ContactMessageController as AdminContactMessageController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GalleryImageController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\TeamMemberController as AdminTeamMemberController;
@@ -19,7 +20,7 @@ Route::get('/team-photo/{path}', [TeamController::class, 'photo'])->where('path'
 Route::get('/team-file/{path}', [TeamController::class, 'file'])->where('path', '.+')->name('team.file');
 Route::get('/team/{teamMember:slug}', [TeamController::class, 'show'])->name('team.show');
 Route::get('/{page}', SitePageController::class)
-    ->where('page', 'about|services|initon|process|contact')
+    ->where('page', 'about|services|initon|process|gallery|contact')
     ->name('pages.show');
 Route::post('/contact', [ContactController::class, 'store'])
     ->middleware('throttle:5,1')
@@ -43,6 +44,9 @@ Route::prefix('admin')->name('admin.')->group(function (): void {
         Route::resource('/services', ServiceController::class)->except(['show']);
         Route::resource('/team', AdminTeamMemberController::class)->except(['show']);
         Route::resource('/clients', ClientController::class)->except(['show']);
+        Route::get('/gallery', [GalleryImageController::class, 'index'])->name('gallery.index');
+        Route::post('/gallery', [GalleryImageController::class, 'store'])->name('gallery.store');
+        Route::delete('/gallery/{galleryImage}', [GalleryImageController::class, 'destroy'])->name('gallery.destroy');
         Route::get('/messages', [AdminContactMessageController::class, 'index'])->name('messages.index');
         Route::get('/messages/{contactMessage}', [AdminContactMessageController::class, 'show'])->name('messages.show');
         Route::delete('/messages/{contactMessage}', [AdminContactMessageController::class, 'destroy'])->name('messages.destroy');

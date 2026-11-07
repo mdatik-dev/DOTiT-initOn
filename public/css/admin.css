@@ -27,3 +27,13 @@
 .admin-settings-heading>span{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:rgba(82,221,244,.09);border:1px solid rgba(82,221,244,.18);color:#5bdcf2}
 .admin-settings-heading h2{margin:0 0 4px;font-size:16px}
 .admin-settings-heading p{margin:0;color:#8794aa;font-size:12px}
+.admin-inline-actions{flex-wrap:nowrap!important}
+.admin-action{min-height:38px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 13px;border-radius:8px;border:1px solid transparent;font-family:Inter,Arial,sans-serif;font-size:12px;font-weight:800;text-decoration:none!important;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease}
+.admin-action i{font-size:11px}
+.admin-action.edit,.message-action.view{color:#7fd8ee!important;background:rgba(29,138,190,.18)!important;border-color:rgba(72,188,225,.28)!important}
+.admin-action.edit:hover,.message-action.view:hover{background:rgba(35,161,205,.28)!important;border-color:rgba(99,209,241,.48)!important;transform:translateY(-1px)}
+.admin-action.delete,.message-action.delete{color:#ffb9c3!important;background:rgba(168,42,72,.18)!important;border-color:rgba(218,80,112,.28)!important}
+.admin-action.delete:hover,.message-action.delete:hover{background:rgba(184,48,78,.28)!important;border-color:rgba(244,99,129,.48)!important;transform:translateY(-1px)}
+.admin-action:focus-visible,.message-action:focus-visible{outline:2px solid rgba(118,216,242,.75);outline-offset:2px}
+.admin-inline-actions form{margin:0}
+.admin-gallery-item form{display:block}

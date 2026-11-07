@@ -11,8 +11,7 @@
           @foreach($services as $service)
             <article class="service-card service-card-dotit {{ $service->is_featured ? 'service-card-accent' : '' }} reveal">
               <span class="service-no">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-              <span class="service-icon-wrap"><i class="{{ $service->icon }}"></i></span>
-              <h3>{{ $service->name }}</h3>
+              <div class="service-card-heading"><span class="service-icon-wrap"><i class="{{ $service->icon }}"></i></span><h3>{{ $service->name }}</h3></div>
               <p>{{ $service->description }}</p>
               <a href="{{ route('pages.show', 'contact') }}">{{ $service->link_label }} <i class="fa-solid fa-arrow-right"></i></a>
             </article>
@@ -31,8 +30,7 @@
           @foreach($initonServices as $service)
             <article class="service-card service-card-initon {{ $service->is_featured ? 'service-card-accent' : '' }} reveal">
               <span class="service-no">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-              <span class="service-icon-wrap"><i class="{{ $service->icon }}"></i></span>
-              <h3>{{ $service->name }}</h3>
+              <div class="service-card-heading"><span class="service-icon-wrap"><i class="{{ $service->icon }}"></i></span><h3>{{ $service->name }}</h3></div>
               <p>{{ $service->description }}</p>
               <a href="{{ route('pages.show', 'contact') }}">{{ $service->link_label }} <i class="fa-solid fa-arrow-right"></i></a>
             </article>
@@ -42,9 +40,10 @@
     @else
       <div class="service-grid">
         @foreach($services as $service)
-          <article class="service-card {{ $service->is_featured ? 'service-card-accent' : '' }} reveal"><span class="service-no">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span><i class="{{ $service->icon }}"></i><h3>{{ $service->name }}</h3><p>{{ $service->description }}</p><a href="{{ route('pages.show', 'contact') }}">{{ $service->link_label }} <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card {{ $service->is_featured ? 'service-card-accent' : '' }} reveal"><span class="service-no">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span><div class="service-card-heading"><span class="service-icon-wrap"><i class="{{ $service->icon }}"></i></span><h3>{{ $service->name }}</h3></div><p>{{ $service->description }}</p><a href="{{ route('pages.show', 'contact') }}">{{ $service->link_label }} <i class="fa-solid fa-arrow-right"></i></a></article>
         @endforeach
       </div>
+      @if($services->count() > 4)<button class="service-mobile-more" type="button" data-service-more aria-expanded="false"><span>See more services</span><i class="fa-solid fa-chevron-down"></i></button>@endif
     @endif
   </div>
 </section>

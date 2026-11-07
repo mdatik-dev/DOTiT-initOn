@@ -14,6 +14,7 @@ class SitePageController extends Controller
             'initon' => 'initOn Digital Marketing',
             'process' => 'Our Process',
             'contact' => 'Contact DOTiT',
+            'gallery' => 'Gallery',
         ];
 
         abort_unless(array_key_exists($page, $titles), 404);

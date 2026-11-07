@@ -23,7 +23,7 @@
               </div></td>
               <td><span class="admin-badge {{ $teamMember->is_active ? '' : 'muted' }}">{{ $teamMember->is_active ? 'Published' : 'Hidden' }}</span></td>
               <td>{{ $teamMember->cv_file_path ? 'Uploaded' : '—' }}</td>
-              <td><div class="admin-inline-actions"><a href="{{ route('admin.team.edit', $teamMember) }}">Edit</a><form method="POST" action="{{ route('admin.team.destroy', $teamMember) }}" onsubmit="return confirm('Delete this team member?')">@csrf @method('DELETE')<button class="admin-button danger" type="submit">Delete</button></form></div></td>
+              <td><div class="admin-inline-actions"><a class="admin-action edit" href="{{ route('admin.team.edit', $teamMember) }}"><i class="fa-solid fa-pen-to-square"></i><span>Edit</span></a><form method="POST" action="{{ route('admin.team.destroy', $teamMember) }}" onsubmit="return confirm('Delete this team member?')">@csrf @method('DELETE')<button class="admin-action delete" type="submit"><i class="fa-solid fa-trash"></i><span>Delete</span></button></form></div></td>
             </tr>
           @endforeach
           </tbody>

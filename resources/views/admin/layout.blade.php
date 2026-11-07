@@ -22,11 +22,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v=3">
+  <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v=4">
   <link rel="stylesheet" href="{{ asset('css/admin-sidebar.css') }}?v=1">
   <link rel="stylesheet" href="{{ asset('css/admin-upload.css') }}?v=2">
   <link rel="stylesheet" href="{{ asset('css/admin-team.css') }}?v=1">
   <link rel="stylesheet" href="{{ asset('css/admin-messages.css') }}?v=1">
+  <link rel="stylesheet" href="{{ asset('css/admin-gallery.css') }}?v=1">
 </head>
 <body class="admin-body">
   <div class="admin-shell">
@@ -40,6 +41,7 @@
         <a class="{{ request()->routeIs('admin.services.*') ? 'active' : '' }}" href="{{ route('admin.services.index') }}" data-label="Services"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Services</span></a>
         <a class="{{ request()->routeIs('admin.team.*') ? 'active' : '' }}" href="{{ route('admin.team.index') }}" data-label="Our Team"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Our Team</span></a>
         <a class="{{ request()->routeIs('admin.clients.*') ? 'active' : '' }}" href="{{ route('admin.clients.index') }}" data-label="Clients"><i class="fa-solid fa-building-user" aria-hidden="true"></i><span>Clients</span></a>
+        <a class="{{ request()->routeIs('admin.gallery.*') ? 'active' : '' }}" href="{{ route('admin.gallery.index') }}" data-label="Gallery"><i class="fa-solid fa-images" aria-hidden="true"></i><span>Gallery</span></a>
         <a class="{{ request()->routeIs('admin.messages.*') ? 'active' : '' }}" href="{{ route('admin.messages.index') }}" data-label="Contact messages"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact messages</span></a>
       </nav>
       <div class="admin-sidebar-bottom">

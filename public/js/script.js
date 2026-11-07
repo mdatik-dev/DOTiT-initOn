@@ -46,6 +46,22 @@
     });
   }
 
+  $$('[data-service-more]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const grid = button.previousElementSibling;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const label = button.querySelector('span');
+
+      if (grid && grid.classList.contains('service-grid')) {
+        grid.classList.toggle('mobile-expanded', !isExpanded);
+      }
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      if (label) {
+        label.textContent = isExpanded ? 'See more services' : 'See less services';
+      }
+    });
+  });
+
   const cursorGlow = $('.cursor-glow');
 
   if (cursorGlow && window.matchMedia('(pointer: fine)').matches) {
